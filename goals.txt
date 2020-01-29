@@ -1,0 +1,28 @@
+//Base Goals
+//Preview video player
+//Cart pop up upon "add to cart"
+//Apply coupon
+//Share
+//Conditional rendering of whether a product has been added to the cart already or not
+
+
+
+//Try to get to (stretch goal)
+//Modal pop out when customer wants to buy. Which then takes their input and saves to the database
+// var purchaseSchema = new Schema({
+//   customer: {
+//     firstName: String,
+//     LastName: String,
+//     email: String,
+//   },
+//   billing: {
+//     creditCard: Number,
+//     expDate: Date,
+//     cvc: Number,
+//     addressLine1: String,
+//     addressLine2: String,
+//     city: String,
+//     state: String,
+//     zip: Number,
+//   },
+// });
