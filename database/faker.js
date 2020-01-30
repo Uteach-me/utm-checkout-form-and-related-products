@@ -22,7 +22,6 @@ const addFake = (dataItem) => {
 for (var i = 0; i < 100; i++) {
   var fakeData =  {
     course: {
-      _id: faker.random.number({min:10000, max:90000}),
       name: faker.commerce.productName(),
       image: faker.image.imageUrl(),
       video: faker.image.imageUrl(),
