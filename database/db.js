@@ -3,10 +3,12 @@ mongoose.connect('mongodb://localhost/courseProducts', {useNewUrlParser: true});
 
 var db = mongoose.connection;
 
+//Initialize plugin to auto-increment Number IDs
+var autoIncrement = require('mongoose-auto-increment');
+autoIncrement.initialize(db);
 
 var productSchema = new mongoose.Schema({
   course: {
-    _id: Number,
     name: String,
     image: String, //url
     video: String, //url
@@ -22,6 +24,7 @@ var productSchema = new mongoose.Schema({
   averageRating: Number, //randomly generate a rating for each product
 });
 
+productSchema.plugin(autoIncrement.plugin, 'Product');
 
 var cartSchema = new mongoose.Schema({
   products: [{
@@ -38,7 +41,6 @@ module.exports = {
   save: (product, callback) => {
     var record = new Product ({
       course: {
-        _id: product.course.id,
         name: product.course.name,
         image: product.course.image,
         video: product.course.video,
@@ -63,5 +65,16 @@ module.exports = {
         callback(null, record);
       }
     });
+  },
+  readAll: (callback) => {
+    Product.find(function (err, products) {
+      if (err) {
+        console.log('ReadAll error');
+        callback(err);
+      } else {
+        console.log('ReadAll success');
+        callback(null, products)
+      }
+    })
   }
 }
