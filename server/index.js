@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const axios = require('axios');
+const controller = require('./controller.js');
 
 // Instantiate the express server
 const app = express();
@@ -13,8 +14,10 @@ const PORT = 3000;
 app.use(morgan('dev'));
 // Serve static files. Any requests for specific files will be served if they exist in the provided folder
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.json());
+app.use(express.urlencoded({ extende: true}));
 
-
+app.get('/products', controller.getProducts);
 
 
 
