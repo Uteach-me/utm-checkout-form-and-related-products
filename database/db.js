@@ -65,5 +65,16 @@ module.exports = {
         callback(null, record);
       }
     });
+  },
+  readAll: (callback) => {
+    Product.find(function (err, products) {
+      if (err) {
+        console.log('ReadAll error');
+        callback(err);
+      } else {
+        console.log('ReadAll success');
+        callback(null, products)
+      }
+    })
   }
 }
