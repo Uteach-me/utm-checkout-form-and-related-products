@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const db = require('../database/db.js');
 
 module.exports = {
@@ -10,6 +11,6 @@ module.exports = {
         console.log('Controller success: getProducts');
         res.send(products);
       }
-    })
-  }
-}
+    });
+  },
+};
