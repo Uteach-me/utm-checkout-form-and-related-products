@@ -1,17 +1,20 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/courseProducts', {useNewUrlParser: true});
+/* eslint-disable no-console */
+const mongoose = require('mongoose');
 
-var db = mongoose.connection;
+mongoose.connect('mongodb://localhost/courseProducts', { useNewUrlParser: true });
 
-//Initialize plugin to auto-increment Number IDs
-var autoIncrement = require('mongoose-auto-increment');
+const db = mongoose.connection;
+
+// Initialize plugin to auto-increment Number IDs
+const autoIncrement = require('mongoose-auto-increment');
+
 autoIncrement.initialize(db);
 
-var productSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
   course: {
     name: String,
-    image: String, //url
-    video: String, //url
+    image: String, // url
+    video: String, // url
     category: String,
     lengthInHours: Number,
     articleCount: Number,
@@ -21,25 +24,25 @@ var productSchema = new mongoose.Schema({
   salesPrice: Number,
   originalPrice: Number,
   totalNumOfPurchases: Number,
-  averageRating: Number, //randomly generate a rating for each product
+  averageRating: Number, // randomly generate a rating for each product
 });
 
 productSchema.plugin(autoIncrement.plugin, 'Product');
 
-var cartSchema = new mongoose.Schema({
+const cartSchema = new mongoose.Schema({
   products: [{
     productId: Number,
   }],
 });
 
-var Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('Product', productSchema);
 
-var Cart = mongoose.model('Cart', cartSchema);
+const Cart = mongoose.model('Cart', cartSchema);
 
 
 module.exports = {
   save: (product, callback) => {
-    var record = new Product ({
+    const record = new Product({
       course: {
         name: product.course.name,
         image: product.course.image,
@@ -56,7 +59,8 @@ module.exports = {
       averageRating: product.averageRating,
     });
 
-    record.save(function (err, record) {
+    // eslint-disable-next-line no-shadow
+    record.save((err, record) => {
       if (err) {
         console.log('save error');
         callback(err);
@@ -67,14 +71,14 @@ module.exports = {
     });
   },
   readAll: (callback) => {
-    Product.find(function (err, products) {
+    Product.find((err, products) => {
       if (err) {
         console.log('ReadAll error');
         callback(err);
       } else {
         console.log('ReadAll success');
-        callback(null, products)
+        callback(null, products);
       }
-    })
-  }
-}
+    });
+  },
+};

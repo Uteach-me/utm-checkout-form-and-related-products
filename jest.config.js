@@ -1,3 +1,5 @@
+/* eslint-disable quote-props */
+/* eslint-disable max-len */
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
 
@@ -115,7 +117,8 @@ module.exports = {
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
 
-  // The paths to modules that run some code to configure or set up the testing environment before each test
+  // The paths to modules that run some code to configure or set up the testing environment
+  // before each test
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
@@ -129,7 +132,7 @@ module.exports = {
 
   // Options that will be passed to the testEnvironment
   testEnvironmentOptions: {
-    'enzymeAdapter': 'react16'
+    'enzymeAdapter': 'react16',
   },
 
   // Adds a location field to test results
@@ -163,8 +166,8 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.jsx$": "babel-jest"
-  }
+    '^.+\\.jsx$': 'babel-jest',
+  },
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
   //   "/node_modules/"
