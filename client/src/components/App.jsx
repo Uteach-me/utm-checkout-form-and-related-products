@@ -6,6 +6,7 @@ import Wrapper from '../elements/Wrapper';
 import TextWrapper from '../elements/TextWrapper';
 import Prices from '../elements/Prices';
 import Expiration from '../elements/Expiration';
+import Button from '../elements/Button';
 
 class App extends Component {
   constructor(props) {
@@ -18,8 +19,8 @@ class App extends Component {
         _id: 4,
         course: {
           name: 'Awesome Concrete Shirt',
-          image: 'http://lorempixel.com/640/480/cats',
-          video: 'http://lorempixel.com/640/480/sports',
+          image: 'http://loremflickr.com/640/480',
+          video: 'http://loremflickr.com/640/480',
           category: 'sysadmin',
           lengthInHours: 449,
           articleCount: 89,
@@ -68,6 +69,9 @@ class App extends Component {
             {' '}
           left at this price!
           </Expiration>
+          <Button addToCart>
+            Add to cart
+          </Button>
         </TextWrapper>
       </Wrapper>
     );

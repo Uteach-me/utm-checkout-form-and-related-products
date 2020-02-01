@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Button = styled.button`
   marin-top: 0.5em;
@@ -8,6 +8,17 @@ const Button = styled.button`
   border: 1px solid #888;
   background: #fff;
   color: #888;
+
+  ${(props) => props.addToCart && css`
+    background: red;
+    color: #fff;
+    border-color: red;
+
+    &:hover {
+      background: maroon;
+      border-color: maroon;
+    }
+  `}
 `;
 
 export default Button;
