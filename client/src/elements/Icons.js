@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  OndemandVideo, InsertDriveFile, Description, FilterVintage, LockOpen, PhoneIphone,
+  OndemandVideo, InsertDriveFile, Description, StarBorder, LockOpen, PhoneIphone,
 } from 'styled-icons/material';
 
 const VideoIcon = styled(OndemandVideo)`
@@ -30,7 +30,7 @@ const ResourcesIcon = styled(Description)`
   width: 15px;
 `;
 
-const CertificateIcon = styled(FilterVintage)`
+const CertificateIcon = styled(StarBorder)`
   flex: 0 0 auto;
   min-width: 1px;
   magin-right: 6px;

@@ -11,7 +11,7 @@ import Guarantee from '../elements/Guarantee';
 import IncentivesWrapper from '../elements/IncentivesWrapper';
 import Incentive from '../elements/Incentive';
 import {
-  VideoIcon, ArticleIcon, ResourcesIcon, CertficateIcon, AccessIcon, MobileIcon,
+  VideoIcon, ArticleIcon, ResourcesIcon, CertificateIcon, AccessIcon, MobileIcon,
 } from '../elements/Icons';
 
 class App extends Component {
@@ -105,6 +105,10 @@ class App extends Component {
             <Incentive>
               <MobileIcon />
               Access on mobile and TV
+            </Incentive>
+            <Incentive>
+              <CertificateIcon />
+              Certificate of Completion
             </Incentive>
           </IncentivesWrapper>
         </TextWrapper>
