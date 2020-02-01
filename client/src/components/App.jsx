@@ -3,6 +3,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Wrapper from '../elements/Wrapper';
+import TextWrapper from '../elements/TextWrapper';
+import Prices from '../elements/Prices';
+
+
 
 class App extends Component {
   constructor(props) {
@@ -54,9 +58,13 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <div>
-        Hello World
-        </div>
+        <TextWrapper>
+          <Prices>
+            <strong>$11.99</strong>
+            <strike>$194.99</strike>
+             94% off
+          </Prices>
+        </TextWrapper>
       </Wrapper>
     );
   }
