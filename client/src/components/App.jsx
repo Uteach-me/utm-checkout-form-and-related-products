@@ -13,6 +13,9 @@ import Incentive from '../elements/Incentive';
 import {
   VideoIcon, ArticleIcon, ResourcesIcon, CertificateIcon, AccessIcon, MobileIcon,
 } from '../elements/Icons';
+import PlayButton from '../elements/PlayButton';
+import VideoWrapper from '../elements/VideoWrapper';
+import VideoPreview from '../elements/VideoPreview';
 
 class App extends Component {
   constructor(props) {
@@ -64,6 +67,10 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <VideoWrapper>
+          <PlayButton />
+          <VideoPreview src="http://loremflickr.com/640/480" />
+        </VideoWrapper>
         <TextWrapper>
           <Prices>
             <strong>$11.99</strong>
