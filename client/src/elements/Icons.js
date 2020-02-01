@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { OndemandVideo, InsertDriveFile, Description } from 'styled-icons/material';
+import {
+  OndemandVideo, InsertDriveFile, Description, FilterVintage, LockOpen,
+} from 'styled-icons/material';
 
 const VideoIcon = styled(OndemandVideo)`
   flex: 0 0 auto;
@@ -28,4 +30,24 @@ const ResourcesIcon = styled(Description)`
   width: 15px;
 `;
 
-export { VideoIcon, ArticleIcon, ResourcesIcon };
+const CertificateIcon = styled(FilterVintage)`
+  flex: 0 0 auto;
+  min-width: 1px;
+  magin-right: 6px;
+  margin-top: -3px;
+  padding-right: 1.5px;
+  width: 15px;
+`;
+
+const AccessIcon = styled(LockOpen)`
+  flex: 0 0 auto;
+  min-width: 1px;
+  magin-right: 6px;
+  margin-top: -3px;
+  padding-right: 1.5px;
+  width: 15px;
+`;
+
+export {
+  VideoIcon, ArticleIcon, ResourcesIcon, CertificateIcon, AccessIcon,
+};
