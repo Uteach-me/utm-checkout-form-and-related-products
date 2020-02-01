@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
 import axios from 'axios';
+import Wrapper from '../elements/Wrapper';
 
 class App extends Component {
   constructor(props) {
@@ -52,9 +53,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
+        <div>
         Hello World
-      </div>
+        </div>
+      </Wrapper>
     );
   }
 }
