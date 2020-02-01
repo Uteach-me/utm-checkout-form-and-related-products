@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { OndemandVideo, InsertDriveFile } from 'styled-icons/material';
+import { OndemandVideo, InsertDriveFile, Description } from 'styled-icons/material';
 
 const VideoIcon = styled(OndemandVideo)`
   flex: 0 0 auto;
@@ -19,4 +19,13 @@ const ArticleIcon = styled(InsertDriveFile)`
   width: 15px;
 `;
 
-export { VideoIcon, ArticleIcon };
+const ResourcesIcon = styled(Description)`
+  flex: 0 0 auto;
+  min-width: 1px;
+  magin-right: 6px;
+  margin-top: -3px;
+  padding-right: 1.5px;
+  width: 15px;
+`;
+
+export { VideoIcon, ArticleIcon, ResourcesIcon };
