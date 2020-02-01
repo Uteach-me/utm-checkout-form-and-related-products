@@ -7,6 +7,7 @@ import TextWrapper from '../elements/TextWrapper';
 import Prices from '../elements/Prices';
 import Expiration from '../elements/Expiration';
 import Button from '../elements/Button';
+import Guarantee from '../elements/Guarantee';
 
 class App extends Component {
   constructor(props) {
@@ -75,6 +76,9 @@ class App extends Component {
           <Button buyNow>
             Buy now
           </Button>
+          <Guarantee>
+            30-Day Money-Back Guarantee
+          </Guarantee>
         </TextWrapper>
       </Wrapper>
     );
