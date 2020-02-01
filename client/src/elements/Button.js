@@ -19,6 +19,15 @@ const Button = styled.button`
       border-color: maroon;
     }
   `}
+
+  ${(props) => props.buyNow && css`
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+
+    &:hover {
+      background: #eee;
+    }
+  `}
 `;
 
 export default Button;

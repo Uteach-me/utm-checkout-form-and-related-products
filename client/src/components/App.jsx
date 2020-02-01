@@ -72,6 +72,9 @@ class App extends Component {
           <Button addToCart>
             Add to cart
           </Button>
+          <Button buyNow>
+            Buy now
+          </Button>
         </TextWrapper>
       </Wrapper>
     );
