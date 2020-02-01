@@ -5,8 +5,7 @@ import axios from 'axios';
 import Wrapper from '../elements/Wrapper';
 import TextWrapper from '../elements/TextWrapper';
 import Prices from '../elements/Prices';
-
-
+import Expiration from '../elements/Expiration';
 
 class App extends Component {
   constructor(props) {
@@ -62,8 +61,14 @@ class App extends Component {
           <Prices>
             <strong>$11.99</strong>
             <strike>$194.99</strike>
-             94% off
+            {' '}
+            94% off
           </Prices>
+          <Expiration>
+            <strong>9 hours</strong>
+            {' '}
+          left at this price!
+          </Expiration>
         </TextWrapper>
       </Wrapper>
     );
