@@ -5,6 +5,9 @@ const Prices = styled.div`
   height: 2.2em;
   display: flex;
   align-items: center;
+  s {
+    padding-right: 10px;
+  }
   strong {
     font-size: 2em;
     font-weight: 800;

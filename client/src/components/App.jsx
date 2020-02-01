@@ -60,8 +60,7 @@ class App extends Component {
         <TextWrapper>
           <Prices>
             <strong>$11.99</strong>
-            <strike>$194.99</strike>
-            {' '}
+            <s>$194.99</s>
             94% off
           </Prices>
           <Expiration>
