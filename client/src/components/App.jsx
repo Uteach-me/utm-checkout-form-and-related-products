@@ -8,6 +8,8 @@ import Prices from '../elements/Prices';
 import Expiration from '../elements/Expiration';
 import Button from '../elements/Button';
 import Guarantee from '../elements/Guarantee';
+import IncentivesWrapper from '../elements/IncentivesWrapper';
+import Incentive from '../elements/Incentive';
 
 class App extends Component {
   constructor(props) {
@@ -79,6 +81,15 @@ class App extends Component {
           <Guarantee>
             30-Day Money-Back Guarantee
           </Guarantee>
+          <IncentivesWrapper>
+            This course includes
+            <Incentive>
+              17 hours of video
+            </Incentive>
+            <Incentive>
+              3 articles
+            </Incentive>
+          </IncentivesWrapper>
         </TextWrapper>
       </Wrapper>
     );
