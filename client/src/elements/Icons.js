@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  OndemandVideo, InsertDriveFile, Description, FilterVintage, LockOpen,
+  OndemandVideo, InsertDriveFile, Description, FilterVintage, LockOpen, PhoneIphone,
 } from 'styled-icons/material';
 
 const VideoIcon = styled(OndemandVideo)`
@@ -48,6 +48,15 @@ const AccessIcon = styled(LockOpen)`
   width: 15px;
 `;
 
+const MobileIcon = styled(PhoneIphone)`
+  flex: 0 0 auto;
+  min-width: 1px;
+  magin-right: 6px;
+  margin-top: -3px;
+  padding-right: 1.5px;
+  width: 15px;
+`;
+
 export {
-  VideoIcon, ArticleIcon, ResourcesIcon, CertificateIcon, AccessIcon,
+  VideoIcon, ArticleIcon, ResourcesIcon, CertificateIcon, AccessIcon, MobileIcon,
 };
