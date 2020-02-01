@@ -10,7 +10,7 @@ import Button from '../elements/Button';
 import Guarantee from '../elements/Guarantee';
 import IncentivesWrapper from '../elements/IncentivesWrapper';
 import Incentive from '../elements/Incentive';
-import { VideoIcon } from '../elements/Icons';
+import { VideoIcon, ArticleIcon } from '../elements/Icons';
 
 class App extends Component {
   constructor(props) {
@@ -89,6 +89,7 @@ class App extends Component {
               17 hours of video
             </Incentive>
             <Incentive>
+              <ArticleIcon />
               3 articles
             </Incentive>
           </IncentivesWrapper>
