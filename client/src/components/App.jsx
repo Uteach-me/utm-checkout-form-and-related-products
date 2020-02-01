@@ -69,7 +69,7 @@ class App extends Component {
       <Wrapper>
         <VideoWrapper>
           <PlayButton />
-          <VideoPreview src="http://loremflickr.com/640/480" />
+          <VideoPreview src={this.state.product.course.video} />
         </VideoWrapper>
         <TextWrapper>
           <Prices>
