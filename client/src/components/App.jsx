@@ -16,6 +16,8 @@ import {
 import PlayButton from '../elements/PlayButton';
 import VideoWrapper from '../elements/VideoWrapper';
 import VideoPreview from '../elements/VideoPreview';
+import CouponWrapper from '../elements/CouponWrapper';
+import CouponButton from '../elements/CouponButton';
 
 class App extends Component {
   constructor(props) {
@@ -118,6 +120,11 @@ class App extends Component {
               Certificate of Completion
             </Incentive>
           </IncentivesWrapper>
+          <CouponWrapper>
+            <CouponButton>
+              Apply Coupon
+            </CouponButton>
+          </CouponWrapper>
         </TextWrapper>
       </Wrapper>
     );
