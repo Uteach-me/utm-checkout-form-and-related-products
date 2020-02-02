@@ -18,6 +18,7 @@ import VideoWrapper from '../elements/VideoWrapper';
 import VideoPreview from '../elements/VideoPreview';
 import CouponWrapper from '../elements/CouponWrapper';
 import CouponButton from '../elements/CouponButton';
+import CouponForm from './CouponForm.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -124,6 +125,7 @@ class App extends Component {
             <CouponButton>
               Apply Coupon
             </CouponButton>
+            <CouponForm />
           </CouponWrapper>
         </TextWrapper>
       </Wrapper>
