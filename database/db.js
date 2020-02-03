@@ -81,4 +81,15 @@ module.exports = {
       }
     });
   },
+  readOne: (id, callback) => {
+    Product.find({ _id: id }, (err, product) => {
+      if (err) {
+        console.log('readOne error');
+        callback(err);
+      } else {
+        console.log('readOne success');
+        callback(null, product);
+      }
+    });
+  },
 };
