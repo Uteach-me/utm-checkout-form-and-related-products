@@ -26,40 +26,24 @@ class App extends Component {
     this.state = {
       // eslint-disable-next-line react/no-unused-state
       products: [],
-      product: {
-        __v: 0,
-        _id: 4,
-        course: {
-          name: 'Awesome Concrete Shirt',
-          image: 'http://loremflickr.com/640/480',
-          video: 'http://loremflickr.com/640/480',
-          category: 'sysadmin',
-          lengthInHours: 449,
-          articleCount: 89,
-          resourceCount: 59,
-        },
-        lastUpdateDate: '2019-05-25T06:38:38.037Z',
-        originalPrice: 649,
-        salesPrice: 580,
-        totalNumOfPurchases: 114141,
-        averageRating: 4,
-      },
+      product: {},
       couponButtonClicked: false,
     };
-    this.getProducts = this.getProducts.bind(this);
+    this.getProduct = this.getProduct.bind(this);
     this.couponButtonClickHandler = this.couponButtonClickHandler.bind(this);
   }
 
   componentDidMount() {
-    this.getProducts();
+    this.getProduct();
   }
 
-  getProducts() {
-    axios.get('/products')
+  getProduct() {
+    axios.get('/products/7')
       .then((response) => {
+        // console.log(response.data);
+        const data = response.data;
         this.setState({
-          // eslint-disable-next-line react/no-unused-state
-          products: response.data,
+          product: data,
         });
       })
       .catch((error) => {
@@ -77,69 +61,73 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <VideoWrapper>
-          <PlayButton />
-          <VideoPreview src={this.state.product.course.video} />
-        </VideoWrapper>
-        <TextWrapper>
-          <Prices>
-            <strong>$11.99</strong>
-            <s>$194.99</s>
+      this.state.product[0] ? (
+        <Wrapper>
+          <VideoWrapper>
+            <PlayButton />
+            <VideoPreview src={this.state.product[0].course.video} />
+          </VideoWrapper>
+          <TextWrapper>
+            <Prices>
+              <strong>$11.99</strong>
+              <s>$194.99</s>
             94% off
-          </Prices>
-          <Expiration>
-            <strong>9 hours</strong>
-            {' '}
+            </Prices>
+            <Expiration>
+              <strong>9 hours</strong>
+              {' '}
           left at this price!
-          </Expiration>
-          <Button addToCart>
+            </Expiration>
+            <Button addToCart>
             Add to cart
-          </Button>
-          <Button buyNow>
+            </Button>
+            <Button buyNow>
             Buy now
-          </Button>
-          <Guarantee>
+            </Button>
+            <Guarantee>
             30-Day Money-Back Guarantee
-          </Guarantee>
-          <IncentivesWrapper>
+            </Guarantee>
+            <IncentivesWrapper>
             This course includes
-            <Incentive>
-              <VideoIcon />
+              <Incentive>
+                <VideoIcon />
               17 hours of video
-            </Incentive>
-            <Incentive>
-              <ArticleIcon />
+              </Incentive>
+              <Incentive>
+                <ArticleIcon />
               3 articles
-            </Incentive>
-            <Incentive>
-              <ResourcesIcon />
+              </Incentive>
+              <Incentive>
+                <ResourcesIcon />
               2 downloadable resources
-            </Incentive>
-            <Incentive>
-              <AccessIcon />
+              </Incentive>
+              <Incentive>
+                <AccessIcon />
               Full lifetime access
-            </Incentive>
-            <Incentive>
-              <MobileIcon />
+              </Incentive>
+              <Incentive>
+                <MobileIcon />
               Access on mobile and TV
-            </Incentive>
-            <Incentive>
-              <CertificateIcon />
+              </Incentive>
+              <Incentive>
+                <CertificateIcon />
               Certificate of Completion
-            </Incentive>
-          </IncentivesWrapper>
-          <CouponWrapper>
-            {this.state.couponButtonClicked ? (
-              <CouponForm />
-            ) : (
-              <CouponButton onClick={this.couponButtonClickHandler}>
+              </Incentive>
+            </IncentivesWrapper>
+            <CouponWrapper>
+              {this.state.couponButtonClicked ? (
+                <CouponForm />
+              ) : (
+                <CouponButton onClick={this.couponButtonClickHandler}>
               Apply Coupon
-              </CouponButton>
-            )}
-          </CouponWrapper>
-        </TextWrapper>
-      </Wrapper>
+                </CouponButton>
+              )}
+            </CouponWrapper>
+          </TextWrapper>
+        </Wrapper>
+      ) : (
+        <div />
+      )
     );
   }
 }
