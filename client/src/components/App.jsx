@@ -44,8 +44,10 @@ class App extends Component {
         totalNumOfPurchases: 114141,
         averageRating: 4,
       },
+      couponButtonClicked: false,
     };
     this.getProducts = this.getProducts.bind(this);
+    this.couponButtonClickHandler = this.couponButtonClickHandler.bind(this);
   }
 
   componentDidMount() {
@@ -65,6 +67,12 @@ class App extends Component {
       })
       .finally(() => {
       });
+  }
+
+  couponButtonClickHandler() {
+    this.setState({
+      couponButtonClicked: true,
+    });
   }
 
   render() {
@@ -122,10 +130,13 @@ class App extends Component {
             </Incentive>
           </IncentivesWrapper>
           <CouponWrapper>
-            <CouponButton>
+            {this.state.couponButtonClicked ? (
+              <CouponForm />
+            ) : (
+              <CouponButton onClick={this.couponButtonClickHandler}>
               Apply Coupon
-            </CouponButton>
-            <CouponForm />
+              </CouponButton>
+            )}
           </CouponWrapper>
         </TextWrapper>
       </Wrapper>
