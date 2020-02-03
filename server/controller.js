@@ -13,4 +13,16 @@ module.exports = {
       }
     });
   },
+  getProduct: (req, res) => {
+    db.readOne(req.params.id, (err, result) => {
+      if (err) {
+        console.log('get error server side');
+        res.status(500);
+      } else {
+        console.log('get success server side');
+        res.status(200);
+        res.send(result);
+      }
+    });
+  },
 };
