@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Background from '../elements/VideoModal/Background';
 import VideoModalWrapper from '../elements/VideoModal/VideoModalWrapper';
 import CoursePreviewHeaderWrapper from '../elements/VideoModal/CoursePreviewHeaderWrapper';
@@ -34,14 +35,15 @@ class VideoModal extends React.Component {
   render() {
     const { product } = this.state;
     const { src } = this.state;
+    const { closeVideoHandler } = this.props;
     return ReactDOM.createPortal(
       <Background>
         <VideoModalWrapper>
           <CoursePreviewHeaderWrapper>
             <CoursePreviewTitle>
-              Course Preview: Learn Python in 24 Days
+              Course Preview: Learn Javascript in 24 Days
             </CoursePreviewTitle>
-            <CloseIcon />
+            <CloseIcon onClick={closeVideoHandler} />
           </CoursePreviewHeaderWrapper>
           <VideoPlayer src={src} />
           <SampleVideoText>
@@ -52,7 +54,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                JavaScript in 3 hours
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
@@ -61,7 +63,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                JavaScript in 1 hour
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
@@ -70,7 +72,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                JavaScript: Understanding the Weird Parts
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
@@ -79,7 +81,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                The Best Way to Learn JavaScript
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
@@ -88,7 +90,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                JavaScript 8 Hour Course
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
@@ -97,7 +99,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                Learn JavaScript in 12 Minutes
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
@@ -106,7 +108,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                JavaScript in 5 Minutes
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
@@ -115,7 +117,7 @@ class VideoModal extends React.Component {
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
-                SQL - MySql for Data Analytics and Business Intelligence
+                Learn Python in 24 Days
               </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>

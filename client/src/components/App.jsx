@@ -40,6 +40,7 @@ class App extends Component {
     this.couponButtonClickHandler = this.couponButtonClickHandler.bind(this);
     this.calculateSalesTimeRemaining = this.calculateSalesTimeRemaining.bind(this);
     this.showVideoHandler = this.showVideoHandler.bind(this);
+    this.closeVideoHandler = this.closeVideoHandler.bind(this);
   }
 
   componentDidMount() {
@@ -65,6 +66,12 @@ class App extends Component {
   showVideoHandler() {
     this.setState({
       showVideoModal: true,
+    });
+  }
+
+  closeVideoHandler() {
+    this.setState({
+      showVideoModal: false,
     });
   }
 
@@ -170,7 +177,7 @@ class App extends Component {
             </CouponWrapper>
           </TextWrapper>
           {showVideoModal ? (
-            <VideoModal product={product[0]} />
+            <VideoModal product={product[0]} closeVideoHandler={this.closeVideoHandler} />
           ) : null}
         </Wrapper>
       ) : (
