@@ -12,6 +12,7 @@ const VideoModalWrapper = styled.div`
   display: block;
   font-size: 15px;
   line-height: 1.43;
+  height: 1000px;
 `;
 
 export default VideoModalWrapper;

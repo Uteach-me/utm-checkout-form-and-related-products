@@ -5,6 +5,8 @@ import VideoModalWrapper from '../elements/VideoModal/VideoModalWrapper';
 import CoursePreviewTitle from '../elements/VideoModal/CoursePreviewTitle';
 import VideoPlayer from '../elements/VideoModal/VideoPlayer';
 import SampleVideoText from '../elements/VideoModal/SampleVideoText';
+import SampleVideoItemWrapper from '../elements/VideoModal/SampleVideoItemWrapper';
+import SampleVideoItemImage from '../elements/VideoModal/SampleVideoItemImage';
 
 const videoModal = document.getElementById('video-modal');
 
@@ -20,6 +22,9 @@ class VideoModal extends React.Component {
           <SampleVideoText>
             Free Sample Videos:
           </SampleVideoText>
+          <SampleVideoItemWrapper>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+          </SampleVideoItemWrapper>
         </VideoModalWrapper>
       </Background>,
       videoModal,
