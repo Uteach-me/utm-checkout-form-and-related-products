@@ -61,7 +61,7 @@ const PlayIcon = styled(PlayCircleOutline)`
   flex: 0 0 auto;
   min-width: 1px;
   magin-right: 6px;
-  margin-top: 20px;
+  margin-top: 0px;
   padding-right: 1.5px;
   width: 15px;
 `;

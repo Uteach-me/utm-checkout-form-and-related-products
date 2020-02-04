@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SampleVideoItemDesc = styled.div`
-  margin-top: 31px;
+  margin-top: 20px;
   margin-left: 5px;
   justify-content: center;
   box-sizing: border-box;
