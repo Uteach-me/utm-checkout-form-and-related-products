@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Background from '../elements/VideoModal/Background';
 import VideoModalWrapper from '../elements/VideoModal/VideoModalWrapper';
+import CoursePreviewTitle from '../elements/VideoModal/CoursePreviewTitle';
 
 const videoModal = document.getElementById('video-modal');
 
@@ -10,7 +11,9 @@ class VideoModal extends React.Component {
     return ReactDOM.createPortal(
       <Background>
         <VideoModalWrapper>
-          This is the modal box
+          <CoursePreviewTitle>
+            Course Preview: Learn Python in 24 Days
+          </CoursePreviewTitle>
         </VideoModalWrapper>
       </Background>,
       videoModal,

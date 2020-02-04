@@ -5,7 +5,7 @@ const VideoModalWrapper = styled.div`
   color: #fff;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 620px;
   background-color: #29303b;
   min-width: 420px;
   box-sizing: border-box;
