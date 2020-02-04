@@ -43,7 +43,70 @@ class VideoModal extends React.Component {
           <SampleVideoText>
             Free Sample Videos:
           </SampleVideoText>
-          <SampleVideoItemWrapper value={product.videoUrl2} onClick={() => this.videoClickHandler(product.videoUrl2)}>
+          <SampleVideoItemWrapper value={product.videoUrl1} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl1)}>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
+            </VideoItemDescWrapper>
+          </SampleVideoItemWrapper>
+          <SampleVideoItemWrapper value={product.videoUrl2} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl2)}>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
+            </VideoItemDescWrapper>
+          </SampleVideoItemWrapper>
+          <SampleVideoItemWrapper value={product.videoUrl3} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl3)}>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
+            </VideoItemDescWrapper>
+          </SampleVideoItemWrapper>
+          <SampleVideoItemWrapper value={product.videoUrl4} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl4)}>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
+            </VideoItemDescWrapper>
+          </SampleVideoItemWrapper>
+          <SampleVideoItemWrapper value={product.videoUrl5} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl5)}>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
+            </VideoItemDescWrapper>
+          </SampleVideoItemWrapper>
+          <SampleVideoItemWrapper value={product.videoUrl6} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl6)}>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
+            </VideoItemDescWrapper>
+          </SampleVideoItemWrapper>
+          <SampleVideoItemWrapper value={product.videoUrl7} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl7)}>
+            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
+            </VideoItemDescWrapper>
+          </SampleVideoItemWrapper>
+          <SampleVideoItemWrapper value={product.videoUrl8} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl8)}>
             <SampleVideoItemImage src="https://loremflickr.com/320/240" />
             <VideoItemDescWrapper>
               <PlayIcon />

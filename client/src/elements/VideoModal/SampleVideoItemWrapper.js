@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SampleVideoItemWrapper = styled.div`
-  background-color: #29303b;
+  background-color: ${(props) => ((props.value === props.currentSrc) ? '#505763' : '#29303b')};
   min-height: 70px;
   display: flex;
   border-bottom: 1px solid #686f7a;
