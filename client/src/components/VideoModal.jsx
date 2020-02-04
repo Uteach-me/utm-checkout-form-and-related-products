@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Background from '../elements/VideoModal/Background';
 import VideoModalWrapper from '../elements/VideoModal/VideoModalWrapper';
+import CoursePreviewHeaderWrapper from '../elements/VideoModal/CoursePreviewHeaderWrapper';
 import CoursePreviewTitle from '../elements/VideoModal/CoursePreviewTitle';
 import VideoPlayer from '../elements/VideoModal/VideoPlayer';
 import SampleVideoText from '../elements/VideoModal/SampleVideoText';
@@ -36,9 +37,11 @@ class VideoModal extends React.Component {
     return ReactDOM.createPortal(
       <Background>
         <VideoModalWrapper>
-          <CoursePreviewTitle>
-            Course Preview: Learn Python in 24 Days
-          </CoursePreviewTitle>
+          <CoursePreviewHeaderWrapper>
+            <CoursePreviewTitle>
+              Course Preview: Learn Python in 24 Days
+            </CoursePreviewTitle>
+          </CoursePreviewHeaderWrapper>
           <VideoPlayer src={src} />
           <SampleVideoText>
             Free Sample Videos:
