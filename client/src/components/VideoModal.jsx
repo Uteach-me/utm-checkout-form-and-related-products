@@ -21,14 +21,14 @@ class VideoModal extends React.Component {
       src: props.product.videoUrl1,
       product: props.product,
     };
-    // this.videoClickHandler = this.videoClickHandler.bind(this);
+    this.videoClickHandler = this.videoClickHandler.bind(this);
   }
 
-  // videoClickHandler(url) {
-  //   this.setState({
-  //     src: url,
-  //   });
-  // }
+  videoClickHandler(url) {
+    this.setState({
+      src: url,
+    });
+  }
 
   render() {
     const { product } = this.state;
@@ -43,7 +43,7 @@ class VideoModal extends React.Component {
           <SampleVideoText>
             Free Sample Videos:
           </SampleVideoText>
-          <SampleVideoItemWrapper url="https://www.youtube.com/embed/hdI2bqOjy3c">
+          <SampleVideoItemWrapper value={product.videoUrl2} onClick={() => this.videoClickHandler(product.videoUrl2)}>
             <SampleVideoItemImage src="https://loremflickr.com/320/240" />
             <VideoItemDescWrapper>
               <PlayIcon />
