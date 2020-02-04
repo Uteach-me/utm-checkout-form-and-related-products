@@ -25,7 +25,15 @@ const productSchema = new mongoose.Schema({
   salesPrice: Number,
   originalPrice: Number,
   totalNumOfPurchases: Number,
-  averageRating: Number, // randomly generate a rating for each product
+  averageRating: Number,
+  videoUrl1: String,
+  videoUrl2: String,
+  videoUrl3: String,
+  videoUrl4: String,
+  videoUrl5: String,
+  videoUrl6: String,
+  videoUrl7: String,
+  videoUrl8: String,
 });
 
 productSchema.plugin(autoIncrement.plugin, 'Product');
@@ -59,6 +67,14 @@ module.exports = {
       originalPrice: product.originalPrice,
       totalNumOfPurchases: product.totalNumOfPurchases,
       averageRating: product.averageRating,
+      videoUrl1: product.videoUrl1,
+      videoUrl2: product.videoUrl2,
+      videoUrl3: product.videoUrl3,
+      videoUrl4: product.videoUrl4,
+      videoUrl5: product.videoUrl5,
+      videoUrl6: product.videoUrl6,
+      videoUrl7: product.videoUrl7,
+      videoUrl8: product.videoUrl8,
     });
 
     // eslint-disable-next-line no-shadow

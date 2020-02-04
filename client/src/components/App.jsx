@@ -20,6 +20,7 @@ import VideoPreview from '../elements/VideoPreview';
 import CouponWrapper from '../elements/CouponWrapper';
 import CouponButton from '../elements/CouponButton';
 import CouponForm from './CouponForm.jsx';
+import VideoModal from './VideoModal.jsx';
 
 // initializes moment js
 moment().format();
@@ -33,10 +34,13 @@ class App extends Component {
       product: {},
       couponButtonClicked: false,
       hoursRemaining: 0,
+      showVideoModal: false,
     };
     this.getProduct = this.getProduct.bind(this);
     this.couponButtonClickHandler = this.couponButtonClickHandler.bind(this);
     this.calculateSalesTimeRemaining = this.calculateSalesTimeRemaining.bind(this);
+    this.showVideoHandler = this.showVideoHandler.bind(this);
+    this.closeVideoHandler = this.closeVideoHandler.bind(this);
   }
 
   componentDidMount() {
@@ -59,6 +63,18 @@ class App extends Component {
       });
   }
 
+  showVideoHandler() {
+    this.setState({
+      showVideoModal: true,
+    });
+  }
+
+  closeVideoHandler() {
+    this.setState({
+      showVideoModal: false,
+    });
+  }
+
   couponButtonClickHandler() {
     this.setState({
       couponButtonClicked: true,
@@ -79,10 +95,11 @@ class App extends Component {
     const { product } = this.state;
     const { couponButtonClicked } = this.state;
     const { hoursRemaining } = this.state;
+    const { showVideoModal } = this.state;
     return (
       product[0] ? (
         <Wrapper>
-          <VideoWrapper>
+          <VideoWrapper onClick={this.showVideoHandler}>
             <PlayButton />
             <VideoPreview src={product[0].course.video} />
           </VideoWrapper>
@@ -159,6 +176,9 @@ class App extends Component {
               )}
             </CouponWrapper>
           </TextWrapper>
+          {showVideoModal ? (
+            <VideoModal product={product[0]} closeVideoHandler={this.closeVideoHandler} />
+          ) : null}
         </Wrapper>
       ) : (
         <div />
