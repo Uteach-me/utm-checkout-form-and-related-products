@@ -20,6 +20,7 @@ const productSchema = new mongoose.Schema({
     articleCount: Number,
     resourceCount: Number,
   },
+  salesEndDate: Date,
   lastUpdateDate: Date,
   salesPrice: Number,
   originalPrice: Number,
@@ -52,6 +53,7 @@ module.exports = {
         articleCount: product.course.articleCount,
         resourceCount: product.course.resourceCount,
       },
+      salesEndDate: product.salesEndDate,
       lastUpdateDate: product.lastUpdateDate,
       salesPrice: product.salesPrice,
       originalPrice: product.originalPrice,
@@ -78,6 +80,17 @@ module.exports = {
       } else {
         console.log('ReadAll success');
         callback(null, products);
+      }
+    });
+  },
+  readOne: (id, callback) => {
+    Product.find({ _id: id }, (err, product) => {
+      if (err) {
+        console.log('readOne error');
+        callback(err);
+      } else {
+        console.log('readOne success');
+        callback(null, product);
       }
     });
   },

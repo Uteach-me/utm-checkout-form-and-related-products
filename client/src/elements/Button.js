@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const Button = styled.button`
-  marin-top: 0.5em;
+  margin-top: 0.5em;
   width: 100%;
   padding: 1em 0;
   text-align: center;

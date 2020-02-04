@@ -25,13 +25,14 @@ for (let i = 0; i < 100; i += 1) {
   const fakeData = {
     course: {
       name: faker.commerce.productName(),
-      image: faker.image.image(),
-      video: faker.image.image(),
+      image: 'http://loremflickr.com/640/480',
+      video: 'http://loremflickr.com/640/480',
       category: randomCategory(),
       lengthInHours: faker.random.number({ min: 21, max: 450 }),
       articleCount: faker.random.number({ min: 12, max: 182 }),
       resourceCount: faker.random.number({ min: 3, max: 84 }),
     },
+    salesEndDate: faker.date.future(),
     lastUpdateDate: faker.date.past(),
     originalPrice: faker.commerce.price(),
     salesPrice: faker.commerce.price(),

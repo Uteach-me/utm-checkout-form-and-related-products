@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({ extende: true }));
 
-app.get('/products', controller.getProducts);
+app.get('/products/:id', controller.getProduct);
 
 
 // Start the server on the provided port
