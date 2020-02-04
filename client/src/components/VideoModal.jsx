@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Background from '../elements/VideoModal/Background';
-import VideoModalBox from '../elements/VideoModal/VideoModalBox';
+import VideoModalWrapper from '../elements/VideoModal/VideoModalWrapper';
 
 const videoModal = document.getElementById('video-modal');
 
@@ -9,9 +9,9 @@ class VideoModal extends React.Component {
   render() {
     return ReactDOM.createPortal(
       <Background>
-        <VideoModalBox>
+        <VideoModalWrapper>
           This is the modal box
-        </VideoModalBox>
+        </VideoModalWrapper>
       </Background>,
       videoModal,
     );
