@@ -32,6 +32,7 @@ for (let i = 0; i < 100; i += 1) {
       articleCount: faker.random.number({ min: 12, max: 182 }),
       resourceCount: faker.random.number({ min: 3, max: 84 }),
     },
+    salesEndDate: faker.date.future(),
     lastUpdateDate: faker.date.past(),
     originalPrice: faker.commerce.price(),
     salesPrice: faker.commerce.price(),
