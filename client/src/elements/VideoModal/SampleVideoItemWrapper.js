@@ -11,6 +11,7 @@ const SampleVideoItemWrapper = styled.div`
   box-sizing: border-box;
   font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
   line-height: 1.43;
+  cursor: pointer;
 `;
 
 export default SampleVideoItemWrapper;

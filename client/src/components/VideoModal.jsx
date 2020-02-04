@@ -9,7 +9,7 @@ import SampleVideoText from '../elements/VideoModal/SampleVideoText';
 import SampleVideoItemWrapper from '../elements/VideoModal/SampleVideoItemWrapper';
 import SampleVideoItemImage from '../elements/VideoModal/SampleVideoItemImage';
 import VideoItemDescWrapper from '../elements/VideoModal/VideoItemDescWrapper';
-import { PlayIcon } from '../elements/Icons';
+import { PlayIcon, CloseIcon } from '../elements/Icons';
 import SampleVideoItemDesc from '../elements/VideoModal/SampleVideoItemDesc';
 
 const videoModal = document.getElementById('video-modal');
@@ -41,6 +41,7 @@ class VideoModal extends React.Component {
             <CoursePreviewTitle>
               Course Preview: Learn Python in 24 Days
             </CoursePreviewTitle>
+            <CloseIcon />
           </CoursePreviewHeaderWrapper>
           <VideoPlayer src={src} />
           <SampleVideoText>
