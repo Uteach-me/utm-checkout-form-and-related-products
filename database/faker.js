@@ -38,6 +38,14 @@ for (let i = 0; i < 100; i += 1) {
     salesPrice: faker.commerce.price(),
     totalNumOfPurchases: faker.random.number({ min: 101, max: 250000 }),
     averageRating: faker.random.number({ min: 3, max: 5 }),
+    videoUrl1: 'https://www.youtube.com/embed/PkZNo7MFNFg',
+    videoUrl2: 'https://www.youtube.com/embed/W6NZfCO5SIk',
+    videoUrl3: 'https://www.youtube.com/embed/Bv_5Zv5c-Ts',
+    videoUrl4: 'https://www.youtube.com/embed/HnXmI2UVZlU',
+    videoUrl5: 'https://www.youtube.com/embed/Qqx_wzMmFeA',
+    videoUrl6: 'https://www.youtube.com/embed/Ukg_U3CnJWI',
+    videoUrl7: 'https://www.youtube.com/embed/c-I5S_zTwAc',
+    videoUrl8: 'https://www.youtube.com/embed/Mus_vwhTCq0',
   };
 
   addFake(fakeData);
