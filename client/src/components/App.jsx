@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
 import axios from 'axios';
+import moment from 'moment';
 import Wrapper from '../elements/Wrapper';
 import TextWrapper from '../elements/TextWrapper';
 import Prices from '../elements/Prices';
@@ -20,6 +21,9 @@ import CouponWrapper from '../elements/CouponWrapper';
 import CouponButton from '../elements/CouponButton';
 import CouponForm from './CouponForm.jsx';
 
+// initializes moment js
+moment().format();
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -28,9 +32,11 @@ class App extends Component {
       products: [],
       product: {},
       couponButtonClicked: false,
+      hoursRemaining: 0,
     };
     this.getProduct = this.getProduct.bind(this);
     this.couponButtonClickHandler = this.couponButtonClickHandler.bind(this);
+    this.calculateSalesTimeRemaining = this.calculateSalesTimeRemaining.bind(this);
   }
 
   componentDidMount() {
@@ -41,10 +47,10 @@ class App extends Component {
     axios.get('/products/7')
       .then((response) => {
         // console.log(response.data);
-        const data = response.data;
+        const { data } = response;
         this.setState({
           product: data,
-        });
+        }, this.calculateSalesTimeRemaining);
       })
       .catch((error) => {
         console.log(error);
@@ -59,18 +65,36 @@ class App extends Component {
     });
   }
 
+  calculateSalesTimeRemaining() {
+    const { product } = this.state;
+    const a = moment(product[0].salesEndDate);
+    const b = moment();
+    const duration = a.diff(b, 'hours');
+    this.setState({
+      hoursRemaining: duration,
+    });
+  }
+
   render() {
+    const { product } = this.state;
+    const { couponButtonClicked } = this.state;
     return (
-      this.state.product[0] ? (
+      product[0] ? (
         <Wrapper>
           <VideoWrapper>
             <PlayButton />
-            <VideoPreview src={this.state.product[0].course.video} />
+            <VideoPreview src={product[0].course.video} />
           </VideoWrapper>
           <TextWrapper>
             <Prices>
-              <strong>$11.99</strong>
-              <s>$194.99</s>
+              <strong>
+                $
+                {product[0].salesPrice}
+              </strong>
+              <s>
+                $
+                {product[0].originalPrice}
+              </s>
             94% off
             </Prices>
             <Expiration>
@@ -91,15 +115,21 @@ class App extends Component {
             This course includes
               <Incentive>
                 <VideoIcon />
-              17 hours of video
+                {product[0].course.lengthInHours}
+                {' '}
+                hours of video
               </Incentive>
               <Incentive>
                 <ArticleIcon />
-              3 articles
+                {product[0].course.articleCount}
+                {' '}
+                articles
               </Incentive>
               <Incentive>
                 <ResourcesIcon />
-              2 downloadable resources
+                {product[0].course.resourceCount}
+                {' '}
+                downloadable resources
               </Incentive>
               <Incentive>
                 <AccessIcon />
@@ -115,7 +145,7 @@ class App extends Component {
               </Incentive>
             </IncentivesWrapper>
             <CouponWrapper>
-              {this.state.couponButtonClicked ? (
+              {couponButtonClicked ? (
                 <CouponForm />
               ) : (
                 <CouponButton onClick={this.couponButtonClickHandler}>
