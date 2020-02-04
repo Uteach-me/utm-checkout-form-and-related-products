@@ -170,7 +170,7 @@ class App extends Component {
             </CouponWrapper>
           </TextWrapper>
           {showVideoModal ? (
-            <VideoModal />
+            <VideoModal product={product[0]} />
           ) : null}
         </Wrapper>
       ) : (

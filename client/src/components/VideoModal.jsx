@@ -14,6 +14,22 @@ import SampleVideoItemDesc from '../elements/VideoModal/SampleVideoItemDesc';
 const videoModal = document.getElementById('video-modal');
 
 class VideoModal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // eslint-disable-next-line react/no-unused-state
+      src: '',
+      product: props.product,
+    };
+    // this.videoClickHandler = this.videoClickHandler.bind(this);
+  }
+
+  // videoClickHandler(url) {
+  //   this.setState({
+  //     src: url,
+  //   });
+  // }
+
   render() {
     return ReactDOM.createPortal(
       <Background>
@@ -25,7 +41,7 @@ class VideoModal extends React.Component {
           <SampleVideoText>
             Free Sample Videos:
           </SampleVideoText>
-          <SampleVideoItemWrapper>
+          <SampleVideoItemWrapper url="https://www.youtube.com/embed/hdI2bqOjy3c">
             <SampleVideoItemImage src="https://loremflickr.com/320/240" />
             <VideoItemDescWrapper>
               <PlayIcon />
