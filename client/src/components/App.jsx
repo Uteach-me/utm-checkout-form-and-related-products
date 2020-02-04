@@ -78,6 +78,7 @@ class App extends Component {
   render() {
     const { product } = this.state;
     const { couponButtonClicked } = this.state;
+    const { hoursRemaining } = this.state;
     return (
       product[0] ? (
         <Wrapper>
@@ -98,7 +99,11 @@ class App extends Component {
             94% off
             </Prices>
             <Expiration>
-              <strong>9 hours</strong>
+              <strong>
+                {hoursRemaining}
+                {' '}
+                hours
+              </strong>
               {' '}
           left at this price!
             </Expiration>
