@@ -18,7 +18,7 @@ class VideoModal extends React.Component {
     super(props);
     this.state = {
       // eslint-disable-next-line react/no-unused-state
-      src: '',
+      src: props.product.videoUrl1,
       product: props.product,
     };
     // this.videoClickHandler = this.videoClickHandler.bind(this);
@@ -31,13 +31,15 @@ class VideoModal extends React.Component {
   // }
 
   render() {
+    const { product } = this.state;
+    const { src } = this.state;
     return ReactDOM.createPortal(
       <Background>
         <VideoModalWrapper>
           <CoursePreviewTitle>
             Course Preview: Learn Python in 24 Days
           </CoursePreviewTitle>
-          <VideoPlayer src="https://www.youtube.com/embed/_uQrJ0TkZlc" />
+          <VideoPlayer src={src} />
           <SampleVideoText>
             Free Sample Videos:
           </SampleVideoText>
