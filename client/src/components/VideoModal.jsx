@@ -7,6 +7,8 @@ import VideoPlayer from '../elements/VideoModal/VideoPlayer';
 import SampleVideoText from '../elements/VideoModal/SampleVideoText';
 import SampleVideoItemWrapper from '../elements/VideoModal/SampleVideoItemWrapper';
 import SampleVideoItemImage from '../elements/VideoModal/SampleVideoItemImage';
+import VideoItemDescWrapper from '../elements/VideoModal/VideoItemDescWrapper';
+import { PlayIcon } from '../elements/Icons';
 
 const videoModal = document.getElementById('video-modal');
 
@@ -24,6 +26,9 @@ class VideoModal extends React.Component {
           </SampleVideoText>
           <SampleVideoItemWrapper>
             <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <VideoItemDescWrapper>
+              <PlayIcon />
+            </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
         </VideoModalWrapper>
       </Background>,

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  OndemandVideo, InsertDriveFile, Description, StarBorder, LockOpen, PhoneIphone,
+  OndemandVideo, InsertDriveFile, Description, StarBorder, LockOpen, PhoneIphone, PlayCircleOutline,
 } from 'styled-icons/material';
 
 const VideoIcon = styled(OndemandVideo)`
@@ -57,6 +57,15 @@ const MobileIcon = styled(PhoneIphone)`
   width: 15px;
 `;
 
+const PlayIcon = styled(PlayCircleOutline)`
+  flex: 0 0 auto;
+  min-width: 1px;
+  magin-right: 6px;
+  margin-top: 20px;
+  padding-right: 1.5px;
+  width: 15px;
+`;
+
 export {
-  VideoIcon, ArticleIcon, ResourcesIcon, CertificateIcon, AccessIcon, MobileIcon,
+  VideoIcon, ArticleIcon, ResourcesIcon, CertificateIcon, AccessIcon, MobileIcon, PlayIcon,
 };
