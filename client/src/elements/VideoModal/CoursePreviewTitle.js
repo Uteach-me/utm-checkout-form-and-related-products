@@ -8,6 +8,7 @@ const CoursePreviewTitle = styled.div`
   box-sizing: border-box;
   color: #fff;
   line-height: 1.43;
+  font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
 `;
 
 export default CoursePreviewTitle;
