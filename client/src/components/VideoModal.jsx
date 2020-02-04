@@ -9,6 +9,7 @@ import SampleVideoItemWrapper from '../elements/VideoModal/SampleVideoItemWrappe
 import SampleVideoItemImage from '../elements/VideoModal/SampleVideoItemImage';
 import VideoItemDescWrapper from '../elements/VideoModal/VideoItemDescWrapper';
 import { PlayIcon } from '../elements/Icons';
+import SampleVideoItemDesc from '../elements/VideoModal/SampleVideoItemDesc';
 
 const videoModal = document.getElementById('video-modal');
 
@@ -28,6 +29,9 @@ class VideoModal extends React.Component {
             <SampleVideoItemImage src="https://loremflickr.com/320/240" />
             <VideoItemDescWrapper>
               <PlayIcon />
+              <SampleVideoItemDesc>
+                SQL - MySql for Data Analytics and Business Intelligence
+              </SampleVideoItemDesc>
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
         </VideoModalWrapper>
