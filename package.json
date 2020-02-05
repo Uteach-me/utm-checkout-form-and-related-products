@@ -1,7 +1,7 @@
 {
   "name": "utm-checkout-form",
   "version": "1.0.0",
-  "description": "Course Produce Checkout Component",
+  "description": "Course Product Checkout Component",
   "main": "index.js",
   "scripts": {
     "test": "jest",

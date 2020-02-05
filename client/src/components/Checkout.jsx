@@ -25,7 +25,7 @@ import VideoModal from './VideoModal.jsx';
 // initializes moment js
 moment().format();
 
-class App extends Component {
+class Checkout extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -187,4 +187,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Checkout;
