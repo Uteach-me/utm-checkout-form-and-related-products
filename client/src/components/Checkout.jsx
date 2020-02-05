@@ -48,7 +48,7 @@ class Checkout extends Component {
   }
 
   getProduct() {
-    axios.get('http://localhost:3007/products/7')
+    axios.get('/products/7')
       .then((response) => {
         // console.log(response.data);
         const { data } = response;
