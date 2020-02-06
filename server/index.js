@@ -5,6 +5,7 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const axios = require('axios');
+const cors = require('cors');
 const controller = require('./controller.js');
 
 // Instantiate the express server
@@ -18,6 +19,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({ extende: true }));
+app.use(cors());
 
 app.get('/products/:id', controller.getProduct);
 
