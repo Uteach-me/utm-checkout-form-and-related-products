@@ -48,7 +48,7 @@ class App extends Component {
   }
 
   getProduct() {
-    axios.get('/products/7')
+    axios.get('http://localhost:3000/products/7')
       .then((response) => {
         // console.log(response.data);
         const { data } = response;

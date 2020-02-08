@@ -10,7 +10,7 @@ const controller = require('./controller.js');
 // Instantiate the express server
 const app = express();
 // Set a constant for the port that our express server will listen on
-const PORT = 3007;
+const PORT = 3000;
 
 app.use(morgan('dev'));
 // Serve static files. Any requests for specific files will be served if they exist

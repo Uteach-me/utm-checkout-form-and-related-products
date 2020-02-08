@@ -8,7 +8,8 @@
     "react-dev": "webpack -w",
     "start": "nodemon ./server/index.js",
     "seeder": "node ./database/faker.js",
-    "jest": "jest --init"
+    "jest": "jest --init",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "Victor Tu",
@@ -36,6 +37,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.15.0",
     "faker": "^4.1.0",
     "moment": "^2.24.0",
