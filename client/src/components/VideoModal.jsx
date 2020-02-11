@@ -50,7 +50,7 @@ class VideoModal extends React.Component {
             Free Sample Videos:
           </SampleVideoText>
           <SampleVideoItemWrapper value={product.videoUrl1} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl1)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video1.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
@@ -59,7 +59,7 @@ class VideoModal extends React.Component {
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
           <SampleVideoItemWrapper value={product.videoUrl2} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl2)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video2.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
@@ -68,7 +68,7 @@ class VideoModal extends React.Component {
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
           <SampleVideoItemWrapper value={product.videoUrl3} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl3)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video3.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
@@ -77,7 +77,7 @@ class VideoModal extends React.Component {
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
           <SampleVideoItemWrapper value={product.videoUrl4} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl4)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video4.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
@@ -86,7 +86,7 @@ class VideoModal extends React.Component {
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
           <SampleVideoItemWrapper value={product.videoUrl5} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl5)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video5.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
@@ -95,7 +95,7 @@ class VideoModal extends React.Component {
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
           <SampleVideoItemWrapper value={product.videoUrl6} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl6)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video6.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
@@ -104,7 +104,7 @@ class VideoModal extends React.Component {
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
           <SampleVideoItemWrapper value={product.videoUrl7} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl7)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video7.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>
@@ -113,7 +113,7 @@ class VideoModal extends React.Component {
             </VideoItemDescWrapper>
           </SampleVideoItemWrapper>
           <SampleVideoItemWrapper value={product.videoUrl8} currentSrc={src} onClick={() => this.videoClickHandler(product.videoUrl8)}>
-            <SampleVideoItemImage src="https://loremflickr.com/320/240" />
+            <SampleVideoItemImage src="https://uteach-me-images.s3-us-west-1.amazonaws.com/VideoImages/Video8.jpg" />
             <VideoItemDescWrapper>
               <PlayIcon />
               <SampleVideoItemDesc>

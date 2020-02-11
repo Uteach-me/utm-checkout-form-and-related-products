@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://172.17.0.2/courseProducts', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/courseProducts', { useNewUrlParser: true });
 
 const db = mongoose.connection;
 
