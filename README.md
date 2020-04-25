@@ -5,7 +5,7 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](Uteachme Checkout Demo.gif)
+![](Uteachme%20Checkout%20Demo.gif)
 
 ## Installation
 
