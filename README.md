@@ -5,7 +5,7 @@
 
 One to two paragraph statement about your product and what it does.
 
-(<iframe src='https://gfycat.com/ifr/JointPeacefulEastsiberianlaika' frameborder='0' scrolling='no' allowfullscreen width='640' height='444'></iframe>)
+![](https://gfycat.com/jointpeacefuleastsiberianlaika)
 
 ## Installation
 
