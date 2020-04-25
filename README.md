@@ -1,8 +1,6 @@
 # Checkout Form
 > Online course product checkout form that displays an overview of the course and allows users to see previews of the course's video content.
 
-[![NPM Version][npm-image]][npm-url]
-
 
 ![](UTEACHMEDemoVideo.gif)
 
@@ -11,8 +9,6 @@
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-
-What things you need to install the software and how to install them
 
 ```
 Node 6 or above
