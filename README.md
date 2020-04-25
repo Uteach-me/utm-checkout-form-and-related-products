@@ -36,7 +36,7 @@ To seed the database with sample data:
 npm run seeder
 ```
 
-Then open [localhost:3007](http://localhost:3007/) to see the component.
+Then open [http://localhost:3007/](http://localhost:3007/) to see the component.
 
 
 ## Built With
