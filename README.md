@@ -1,40 +1,50 @@
-# Uteach-me Product Page
-# utm-checkout-form-and-related-products
+# Checkout Form
+> Online course product checkout form that displays an overview of the course and allows users to see previews of the course's video content.
 
-> Project description
 
-## Related Projects
+![](UTEACHMEDemoVideo.gif)
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+## Getting Started
 
-## Table of Contents
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+### Prerequisites
 
-## Usage
+```
+Node 6 or above
+mongoDB
+```
 
-> Some usage instructions
+### Installing
 
-## Requirements
+Install all modules and dependencies
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
+```
 npm install
 ```
 
+Start the server and webpack
+
+```
+npm run react-dev
+npm start
+```
+
+To seed the database with sample data:
+
+```
+npm run seeder
+```
+
+Then open [http://localhost:3007/](http://localhost:3007/) to see the component.
+
+
+## Built With
+
+* React 16
+* Webpack 4
+* Babel 7
+* Nodejs
+* Express.js
+* Styled Components
+* MongoDB
