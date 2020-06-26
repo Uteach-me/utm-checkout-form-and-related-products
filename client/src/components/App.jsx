@@ -184,7 +184,9 @@ class App extends Component {
           ) : null}
         </Wrapper>
       ) : (
-        <div />
+        <div>
+          <h2>Loading</h2>
+        </div>
       )
     );
   }
