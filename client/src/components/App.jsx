@@ -51,7 +51,7 @@ class App extends Component {
     // eslint-disable-next-line max-len
     const randomNumber = Math.floor(Math.random() * (Math.floor(100) - Math.ceil(1) + 1)) + Math.ceil(1);
 
-    axios.get(`http://localhost:3007/products/${randomNumber}`)
+    axios.get(`/products/${randomNumber}`)
       .then((response) => {
         // console.log(response.data);
         const { data } = response;
