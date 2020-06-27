@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable no-console */
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import Wrapper from '../elements/Wrapper';
@@ -19,8 +19,10 @@ import VideoWrapper from '../elements/VideoWrapper';
 import VideoPreview from '../elements/VideoPreview';
 import CouponWrapper from '../elements/CouponWrapper';
 import CouponButton from '../elements/CouponButton';
-import CouponForm from './CouponForm.jsx';
-import VideoModal from './VideoModal.jsx';
+// import CouponForm from './CouponForm.jsx';
+// import VideoModal from './VideoModal.jsx';
+const CouponForm = lazy(() => import('./CouponForm'));
+const VideoModal = lazy(() => import('./VideoModal'));
 
 // initializes moment js
 moment().format();
@@ -41,11 +43,17 @@ class App extends Component {
     this.calculateSalesTimeRemaining = this.calculateSalesTimeRemaining.bind(this);
     this.showVideoHandler = this.showVideoHandler.bind(this);
     this.closeVideoHandler = this.closeVideoHandler.bind(this);
+    this.renderLoader = this.renderLoader.bind(this);
   }
 
   componentDidMount() {
     this.getProduct();
   }
+
+  renderLoader() {
+    return <p>Loading</p>;
+  }
+
 
   getProduct() {
     // eslint-disable-next-line max-len
@@ -171,7 +179,9 @@ class App extends Component {
             </IncentivesWrapper>
             <CouponWrapper>
               {couponButtonClicked ? (
-                <CouponForm />
+                <Suspense fallback={this.renderLoader()}>
+                  <CouponForm />
+                </Suspense>
               ) : (
                 <CouponButton onClick={this.couponButtonClickHandler}>
               Apply Coupon
@@ -180,7 +190,9 @@ class App extends Component {
             </CouponWrapper>
           </TextWrapper>
           {showVideoModal ? (
-            <VideoModal product={product[0]} closeVideoHandler={this.closeVideoHandler} />
+            <Suspense fallback={this.renderLoader()}>
+              <VideoModal product={product[0]} closeVideoHandler={this.closeVideoHandler} />
+            </Suspense>
           ) : null}
         </Wrapper>
       ) : (
